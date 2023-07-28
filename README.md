@@ -152,7 +152,7 @@ length of test_loader 20
 
 </pre>
 #### SAMPLE IMAGES IN TRAIN LOADER
-![alt text]sample images train loader
+![sample images train loader](https://github.com/RajidiSahithi/Assignment11/blob/main/Images%20S11/sample_Images.png)
 
 ## CNN_MODEL
 
@@ -385,156 +385,15 @@ scheduler = OneCycleLR(
 * Visual representation helps identify patterns or common characteristics behind misclassifications.
 * Gain insights into the performance of your image classification model.
 * Refine training data, adjust model parameters, or consider alternative approaches to enhance accuracy.
-
+  
+![mias_images](https://github.com/RajidiSahithi/Assignment11/blob/main/Images%20S11/misclassifiedimages_10.png)
 ## [GRAD_CAM]
 * Implements gradCam of the given images and specified layer of the model.(Last Convolutional Layer)
 
+  ![gradcam](https://github.com/RajidiSahithi/Assignment11/blob/main/Images%20S11/grad-cam_10.png)
+
 ## [RESULTS]
 <pre>
-Collecting albumentations==0.4.6
-  Downloading albumentations-0.4.6.tar.gz (117 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 117.2/117.2 kB 2.6 MB/s eta 0:00:00
-  Preparing metadata (setup.py) ... done
-Requirement already satisfied: numpy>=1.11.1 in /usr/local/lib/python3.10/dist-packages (from albumentations==0.4.6) (1.22.4)
-Requirement already satisfied: scipy in /usr/local/lib/python3.10/dist-packages (from albumentations==0.4.6) (1.10.1)
-Requirement already satisfied: imgaug>=0.4.0 in /usr/local/lib/python3.10/dist-packages (from albumentations==0.4.6) (0.4.0)
-Requirement already satisfied: PyYAML in /usr/local/lib/python3.10/dist-packages (from albumentations==0.4.6) (6.0.1)
-Requirement already satisfied: opencv-python>=4.1.1 in /usr/local/lib/python3.10/dist-packages (from albumentations==0.4.6) (4.7.0.72)
-Requirement already satisfied: six in /usr/local/lib/python3.10/dist-packages (from imgaug>=0.4.0->albumentations==0.4.6) (1.16.0)
-Requirement already satisfied: Pillow in /usr/local/lib/python3.10/dist-packages (from imgaug>=0.4.0->albumentations==0.4.6) (9.4.0)
-Requirement already satisfied: matplotlib in /usr/local/lib/python3.10/dist-packages (from imgaug>=0.4.0->albumentations==0.4.6) (3.7.1)
-Requirement already satisfied: scikit-image>=0.14.2 in /usr/local/lib/python3.10/dist-packages (from imgaug>=0.4.0->albumentations==0.4.6) (0.19.3)
-Requirement already satisfied: imageio in /usr/local/lib/python3.10/dist-packages (from imgaug>=0.4.0->albumentations==0.4.6) (2.25.1)
-Requirement already satisfied: Shapely in /usr/local/lib/python3.10/dist-packages (from imgaug>=0.4.0->albumentations==0.4.6) (2.0.1)
-Requirement already satisfied: networkx>=2.2 in /usr/local/lib/python3.10/dist-packages (from scikit-image>=0.14.2->imgaug>=0.4.0->albumentations==0.4.6) (3.1)
-Requirement already satisfied: tifffile>=2019.7.26 in /usr/local/lib/python3.10/dist-packages (from scikit-image>=0.14.2->imgaug>=0.4.0->albumentations==0.4.6) (2023.7.18)
-Requirement already satisfied: PyWavelets>=1.1.1 in /usr/local/lib/python3.10/dist-packages (from scikit-image>=0.14.2->imgaug>=0.4.0->albumentations==0.4.6) (1.4.1)
-Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.10/dist-packages (from scikit-image>=0.14.2->imgaug>=0.4.0->albumentations==0.4.6) (23.1)
-Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib->imgaug>=0.4.0->albumentations==0.4.6) (1.1.0)
-Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.10/dist-packages (from matplotlib->imgaug>=0.4.0->albumentations==0.4.6) (0.11.0)
-Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib->imgaug>=0.4.0->albumentations==0.4.6) (4.41.1)
-Requirement already satisfied: kiwisolver>=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib->imgaug>=0.4.0->albumentations==0.4.6) (1.4.4)
-Requirement already satisfied: pyparsing>=2.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib->imgaug>=0.4.0->albumentations==0.4.6) (3.1.0)
-Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.10/dist-packages (from matplotlib->imgaug>=0.4.0->albumentations==0.4.6) (2.8.2)
-...
-Requirement already satisfied: cmake in /usr/local/lib/python3.10/dist-packages (from triton==2.0.0->torch) (3.25.2)
-Requirement already satisfied: lit in /usr/local/lib/python3.10/dist-packages (from triton==2.0.0->torch) (16.0.6)
-Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.10/dist-packages (from jinja2->torch) (2.1.3)
-Requirement already satisfied: mpmath>=0.19 in /usr/local/lib/python3.10/dist-packages (from sympy->torch) (1.3.0)
-Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...
-Files already downloaded and verified
-Files already downloaded and verified
-Compose([
-  Normalize(always_apply=True, p=1.0, mean=(0.4914, 0.4822, 0.4465), std=(0.247, 0.2435, 0.2616), max_pixel_value=255.0),
-  PadIfNeeded(always_apply=True, p=1.0, min_height=36, min_width=36, border_mode=4, value=None, mask_value=None),
-  RandomCrop(always_apply=True, p=1.0, height=32, width=32),
-  HorizontalFlip(always_apply=False, p=0.5),
-  CoarseDropout(always_apply=True, p=0.5, max_holes=1, max_height=16, max_width=16, min_holes=1, min_height=16, min_width=16),
-  ToTensorV2(always_apply=True, p=1.0),
-], p=1.0, bbox_params=None, keypoint_params=None, additional_targets={})
-Compose([
-  Normalize(always_apply=True, p=1.0, mean=(0.4914, 0.4822, 0.4465), std=(0.2023, 0.1994, 0.201), max_pixel_value=255.0),
-  ToTensorV2(always_apply=True, p=1.0),
-], p=1.0, bbox_params=None, keypoint_params=None, additional_targets={})
-<torch.utils.data.dataloader.DataLoader object at 0x79064c065f00>
-length of train_loader 98
-<torch.utils.data.dataloader.DataLoader object at 0x79064c065de0>
-length of test_loader 20
-WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
-WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
-WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
-WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
-WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
-WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
-WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
-WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
-WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
-WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
-WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
-WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
-WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
-WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
-WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
-WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
-
-==> Building model..
-torch.Size([1, 10])
-cuda
-Requirement already satisfied: torchsummary in /usr/local/lib/python3.10/dist-packages (1.5.1)
-cuda
-----------------------------------------------------------------
-        Layer (type)               Output Shape         Param #
-================================================================
-            Conv2d-1           [-1, 64, 32, 32]           1,728
-       BatchNorm2d-2           [-1, 64, 32, 32]             128
-            Conv2d-3           [-1, 64, 32, 32]          36,864
-       BatchNorm2d-4           [-1, 64, 32, 32]             128
-            Conv2d-5           [-1, 64, 32, 32]          36,864
-       BatchNorm2d-6           [-1, 64, 32, 32]             128
-        BasicBlock-7           [-1, 64, 32, 32]               0
-            Conv2d-8           [-1, 64, 32, 32]          36,864
-       BatchNorm2d-9           [-1, 64, 32, 32]             128
-           Conv2d-10           [-1, 64, 32, 32]          36,864
-      BatchNorm2d-11           [-1, 64, 32, 32]             128
-       BasicBlock-12           [-1, 64, 32, 32]               0
-           Conv2d-13          [-1, 128, 16, 16]          73,728
-      BatchNorm2d-14          [-1, 128, 16, 16]             256
-           Conv2d-15          [-1, 128, 16, 16]         147,456
-      BatchNorm2d-16          [-1, 128, 16, 16]             256
-           Conv2d-17          [-1, 128, 16, 16]           8,192
-      BatchNorm2d-18          [-1, 128, 16, 16]             256
-       BasicBlock-19          [-1, 128, 16, 16]               0
-           Conv2d-20          [-1, 128, 16, 16]         147,456
-...
-Forward/backward pass size (MB): 11.25
-Params size (MB): 42.63
-Estimated Total Size (MB): 53.89
-----------------------------------------------------------------
-Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...
-ResNet(
-  (conv1): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
-  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-  (layer1): Sequential(
-    (0): BasicBlock(
-      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
-      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
-      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (shortcut): Sequential()
-    )
-    (1): BasicBlock(
-      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
-      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
-      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (shortcut): Sequential()
-    )
-  )
-  (layer2): Sequential(
-    (0): BasicBlock(
-      (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
-      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
-      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-...
-      (shortcut): Sequential()
-    )
-  )
-  (linear): Linear(in_features=512, out_features=10, bias=True)
-)
-Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...
-/usr/local/lib/python3.10/dist-packages/torch_lr_finder/lr_finder.py:5: TqdmExperimentalWarning: Using `tqdm.autonotebook.tqdm` in notebook mode. Use `tqdm.tqdm` instead to force console mode (e.g. in jupyter console)
-  from tqdm.autonotebook import tqdm
-Could not render content for "application/vnd.jupyter.widget-view+json"
-{"version_major":2,"version_minor":0,"model_id":"c2a499bdb4d0419ba6583e223093160a"}
-Stopping early, the loss has diverged
-Learning rate search finished. See the graph with {finder_name}.plot()
-LR suggestion: steepest gradient
-Suggested LR: 1.59E-03
-
-Min Loss = 1.720862924424122, Max LR = 0.16257556664437933
-/usr/local/lib/python3.10/dist-packages/torch/optim/lr_scheduler.py:139: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
-  warnings.warn("Detected call of `lr_scheduler.step()` before `optimizer.step()`. "
 EPOCH: 0
 lr=  0.0003657
 Loss=1.2841397523880005 Batch_id=97 Accuracy=43.78: 100%|██████████| 98/98 [00:59<00:00,  1.66it/s]
